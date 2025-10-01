@@ -7,6 +7,7 @@ export default function randomNumber(min, max) {
     throw new Error('Argumenty muszą być liczbami');
   }
   if (min > max) {
-    throw new Error('Minimalna wartość nie może być większa niż maksymalna')
+    throw new Error('Minimalna wartość nie może być większa niż maksymalna');
   }
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
