@@ -11,3 +11,7 @@ test('jeśli podasz jako argument "nie liczbę", to zostanie rzucony błąd', ()
   expect(() => randomNumber('a', 5)).toThrow();
   expect(() => randomNumber(1, 'b')).toThrow();
 });
+
+test('jeśli podasz przedział wykluczający się (np. 4 do 3), to zostanie rzucony błąd', () => {
+  expect(() => randomNumber(4, 3)).toThrow();
+});
